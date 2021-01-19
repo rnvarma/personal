@@ -17,13 +17,23 @@ const useStyles = makeStyles({
   },
 })
 
-type Props = {}
+type Props = {
+  selectedPostType?: string
+  onNavOptionClicked: (postType: string) => void
+}
 
-export default function PageLayout({ children }) {
+export default function PageLayout({
+  children,
+  selectedPostType,
+  onNavOptionClicked,
+}) {
   const classes = useStyles()
   return (
     <div className={classes.root}>
-      <LeftNav />
+      <LeftNav
+        selectedPostType={selectedPostType}
+        onNavOptionClicked={onNavOptionClicked}
+      />
       <div className={classes.body}>{children}</div>
     </div>
   )

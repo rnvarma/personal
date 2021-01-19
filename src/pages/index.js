@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import { graphql } from "gatsby"
 import _ from "underscore"
@@ -15,11 +15,21 @@ const useStyles = makeStyles({
 
 export default function Home({ data }) {
   const classes = useStyles()
+  const [selectedPostType, setSelectedPostType] = useState(undefined)
+
   const posts = data.allPostsJson.edges
-  const sortedPosts = _.sortBy(posts, post => moment(post.node.date)).reverse()
+  const filteredPosts = _.filter(posts, post =>
+    selectedPostType ? post.node.type === selectedPostType : true
+  )
+  const sortedPosts = _.sortBy(filteredPosts, post =>
+    moment(post.node.date)
+  ).reverse()
 
   return (
-    <PageLayout>
+    <PageLayout
+      selectedPostType={selectedPostType}
+      onNavOptionClicked={postType => setSelectedPostType(postType)}
+    >
       <div className={classes.root}>
         {sortedPosts.map(post => (
           <Post post={post.node} />

@@ -22,8 +22,6 @@ type Props = {
 export default function Photos({ date, img }) {
   const classes = useStyles()
 
-  console.log(img)
-
   return (
     <PostLayout leftContent={<>{moment(date).format("MMM Do, YYYY")}</>}>
       <div className={classes.root}>

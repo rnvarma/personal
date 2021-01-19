@@ -1,7 +1,8 @@
 import React from "react"
+import cx from "classnames"
 import { makeStyles } from "@material-ui/core/styles"
 
-const LEFT_CONTENT_WIDTH = 200
+export const LEFT_CONTENT_WIDTH = 200
 
 const useStyles = makeStyles({
   root: {
@@ -19,19 +20,25 @@ const useStyles = makeStyles({
   body: {
     width: `calc(100% - ${LEFT_CONTENT_WIDTH}px)`,
   },
+  fullBody: {
+    width: `100%`,
+  },
 })
 
 type Props = {
-  leftContent: JSX.Element
+  leftContent?: JSX.Element
+  fullWidth?: boolean
 }
 
-export default function PostLayout({ leftContent, children }) {
+export default function PostLayout({ leftContent, children, fullWidth }) {
   const classes = useStyles()
 
   return (
     <div className={classes.root}>
-      <div className={classes.leftContent}>{leftContent}</div>
-      <div className={classes.body}>{children}</div>
+      {!fullWidth && <div className={classes.leftContent}>{leftContent}</div>}
+      <div className={cx(classes.body, { [classes.fullBody]: fullWidth })}>
+        {children}
+      </div>
     </div>
   )
 }

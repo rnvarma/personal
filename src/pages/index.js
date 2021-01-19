@@ -6,6 +6,7 @@ import moment from "moment"
 
 import Post from "../components/post"
 import PageLayout from "../components/pageLayout"
+import { NAV_OPTIONS } from "../constants/posts"
 
 import "../index.css"
 
@@ -22,7 +23,9 @@ export default function Home({ data }) {
     selectedPostType ? post.node.type === selectedPostType : true
   )
   const sortedPosts = _.sortBy(filteredPosts, post =>
-    moment(post.node.date)
+    post.node.type === NAV_OPTIONS.travel.id
+      ? moment(post.node.travels[0].end_date)
+      : moment(post.node.date)
   ).reverse()
 
   return (
@@ -50,6 +53,11 @@ export const pageQuery = graphql`
           author
           content
           review
+          travels {
+            location
+            end_date
+            with
+          }
           image {
             publicURL
             childImageSharp {

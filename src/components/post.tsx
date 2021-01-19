@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles"
 import Thoughts from "./posts/thoughts"
 import Books from "./posts/books"
 import Photos from "./posts/photos"
+import Travel from "./posts/travel"
 
 import { NAV_OPTIONS } from "../constants/posts"
 
@@ -34,6 +35,8 @@ export default function Post({ post }) {
     )
   } else if (NAV_OPTIONS.photos.id === post.type) {
     return <Photos date={post.date} img={post.image.childImageSharp.fluid} />
+  } else if (NAV_OPTIONS.travel.id === post.type) {
+    return <Travel startDate={post.date} travels={post.travels} />
   }
 
   return <div className={classes.root}></div>

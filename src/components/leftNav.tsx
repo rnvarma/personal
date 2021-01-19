@@ -32,6 +32,7 @@ const useStyles = makeStyles({
     fontSize: 18,
     fontWeight: 500,
     padding: 8,
+    marginRight: 12,
     position: "relative",
 
     "&:hover": {

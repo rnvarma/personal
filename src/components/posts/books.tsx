@@ -16,7 +16,6 @@ const useStyles = makeStyles({
     marginTop: 16,
     whiteSpace: "pre-wrap",
     fontSize: 18,
-    fontSize: 18,
     lineHeight: "24px",
   },
 })

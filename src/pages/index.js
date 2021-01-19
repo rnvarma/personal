@@ -28,10 +28,17 @@ export default function Home({ data }) {
       : moment(post.node.date)
   ).reverse()
 
+  const postCounts = {}
+  _.map(
+    _.groupBy(posts, post => post.node.type),
+    (posts, type) => (postCounts[type] = posts.length)
+  )
+
   return (
     <PageLayout
       selectedPostType={selectedPostType}
       onNavOptionClicked={postType => setSelectedPostType(postType)}
+      postCounts={postCounts}
     >
       <div className={classes.root}>
         {sortedPosts.map(post => (

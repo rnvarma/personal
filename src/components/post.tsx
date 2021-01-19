@@ -5,6 +5,7 @@ import Thoughts from "./posts/thoughts"
 import Books from "./posts/books"
 import Photos from "./posts/photos"
 import Travel from "./posts/travel"
+import LifeEvent from "./posts/lifeEvent"
 
 import { NAV_OPTIONS } from "../constants/posts"
 
@@ -37,6 +38,8 @@ export default function Post({ post }) {
     return <Photos date={post.date} img={post.image.childImageSharp.fluid} />
   } else if (NAV_OPTIONS.travel.id === post.type) {
     return <Travel startDate={post.date} travels={post.travels} />
+  } else if (NAV_OPTIONS.life_event.id === post.type) {
+    return <LifeEvent date={post.date} title={post.title} />
   }
 
   return <div className={classes.root}></div>

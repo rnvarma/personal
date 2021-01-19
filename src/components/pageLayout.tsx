@@ -26,6 +26,7 @@ export default function PageLayout({
   children,
   selectedPostType,
   onNavOptionClicked,
+  postCounts,
 }) {
   const classes = useStyles()
   return (
@@ -33,6 +34,7 @@ export default function PageLayout({
       <LeftNav
         selectedPostType={selectedPostType}
         onNavOptionClicked={onNavOptionClicked}
+        postCounts={postCounts}
       />
       <div className={classes.body}>{children}</div>
     </div>

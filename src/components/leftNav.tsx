@@ -34,6 +34,9 @@ const useStyles = makeStyles({
     padding: 8,
     marginRight: 12,
     position: "relative",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
 
     "&:hover": {
       cursor: "pointer",
@@ -50,6 +53,11 @@ const useStyles = makeStyles({
     borderRadius: 4,
     backgroundColor: "#0069ED",
   },
+  numPosts: {
+    color: "#555555",
+    fontSize: 16,
+    marginRight: 10,
+  },
 })
 
 type Props = {
@@ -57,7 +65,11 @@ type Props = {
   onNavOptionClicked: (postType: string) => void
 }
 
-export default function LeftNav({ selectedPostType, onNavOptionClicked }) {
+export default function LeftNav({
+  selectedPostType,
+  onNavOptionClicked,
+  postCounts,
+}) {
   const classes = useStyles()
   return (
     <div className={classes.root}>
@@ -73,6 +85,7 @@ export default function LeftNav({ selectedPostType, onNavOptionClicked }) {
           }
         >
           {`${nav_option.icon}   ${nav_option.name}`}
+          <div className={classes.numPosts}>{postCounts[nav_option.id]}</div>
           {selectedPostType === nav_option.id && (
             <div className={classes.selectedOption} />
           )}

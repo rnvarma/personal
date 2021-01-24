@@ -49,6 +49,7 @@ export default function PageLayout({
   selectedPostType,
   onNavOptionClicked,
   postCounts,
+  currentTitlePost,
 }) {
   const classes = useStyles()
   return (
@@ -59,8 +60,11 @@ export default function PageLayout({
         onNavOptionClicked={onNavOptionClicked}
         postCounts={postCounts}
       />
-      <MobileNav className={classes.mobileNav} />
-      <div className={classes.body}>{children}</div>
+      <MobileNav
+        className={classes.mobileNav}
+        currentTitlePost={currentTitlePost}
+      />
+      {children}
     </div>
   )
 }

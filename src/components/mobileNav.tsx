@@ -2,7 +2,7 @@ import React from "react"
 import cx from "classnames"
 import { makeStyles } from "@material-ui/core/styles"
 
-const MOBILE_NAV_HEIGHT = 60
+export const MOBILE_NAV_HEIGHT = 60
 
 const useStyles = makeStyles(theme => ({
   root: {

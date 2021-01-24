@@ -6,13 +6,17 @@ import PostLayout from "./layout"
 
 import { NAV_OPTIONS } from "../../constants/posts"
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {},
   title: {
     fontSize: 18,
     marginTop: -4, // to offset thespace made by the icon to align the title with the date
+
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 24,
+    },
   },
-})
+}))
 
 type Props = {
   date: string

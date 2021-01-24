@@ -6,24 +6,40 @@ import PostLayout, { LEFT_CONTENT_WIDTH } from "./layout"
 
 import { NAV_OPTIONS } from "../../constants/posts"
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {},
   travelEntry: {
     marginBottom: 20,
     display: "flex",
     alignItems: "flex-start",
+
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      marginBottom: 28,
+    },
   },
   date: {
     fontSize: 18,
     color: "#555555",
     width: LEFT_CONTENT_WIDTH,
+
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 20,
+      width: "100%",
+      marginBottom: 12,
+    },
   },
   info: {
     width: `calc(100% - ${LEFT_CONTENT_WIDTH}px)`,
     fontSize: 18,
     marginTop: -4, // to offset thespace made by the icon to align the title with the date
+
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 20,
+      width: "100%",
+    },
   },
-})
+}))
 
 type Props = {
   startDate: string

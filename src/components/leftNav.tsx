@@ -1,4 +1,5 @@
 import React from "react"
+import cx from "classnames"
 import { makeStyles } from "@material-ui/core/styles"
 
 import { NAV_OPTIONS } from "../constants/posts"
@@ -13,7 +14,7 @@ const ORDERED_OPTIONS = [
 
 export const LEFT_NAV_WIDTH = 300
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     width: LEFT_NAV_WIDTH,
     height: "100vh",
@@ -58,21 +59,23 @@ const useStyles = makeStyles({
     fontSize: 16,
     marginRight: 10,
   },
-})
+}))
 
 type Props = {
   selectedPostType?: string
   onNavOptionClicked: (postType: string) => void
+  className?: string
 }
 
 export default function LeftNav({
   selectedPostType,
   onNavOptionClicked,
   postCounts,
+  className,
 }) {
   const classes = useStyles()
   return (
-    <div className={classes.root}>
+    <div className={cx(classes.root, className)}>
       <div className={classes.websiteHeader}>Rohan Varma</div>
       {ORDERED_OPTIONS.map(nav_option => (
         <div

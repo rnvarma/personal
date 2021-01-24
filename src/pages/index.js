@@ -3,10 +3,12 @@ import { makeStyles } from "@material-ui/core/styles"
 import { graphql } from "gatsby"
 import _ from "underscore"
 import moment from "moment"
+import { Helmet } from "react-helmet"
 
 import Post from "../components/post"
 import PageLayout from "../components/pageLayout"
 import { NAV_OPTIONS } from "../constants/posts"
+import favicon from "../favicon.png"
 
 import "../index.css"
 
@@ -35,17 +37,25 @@ export default function Home({ data }) {
   )
 
   return (
-    <PageLayout
-      selectedPostType={selectedPostType}
-      onNavOptionClicked={postType => setSelectedPostType(postType)}
-      postCounts={postCounts}
-    >
-      <div className={classes.root}>
-        {sortedPosts.map(post => (
-          <Post post={post.node} />
-        ))}
-      </div>
-    </PageLayout>
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Rohan Varma</title>
+        <link rel="icon" href={favicon} />
+      </Helmet>
+
+      <PageLayout
+        selectedPostType={selectedPostType}
+        onNavOptionClicked={postType => setSelectedPostType(postType)}
+        postCounts={postCounts}
+      >
+        <div className={classes.root}>
+          {sortedPosts.map(post => (
+            <Post post={post.node} />
+          ))}
+        </div>
+      </PageLayout>
+    </>
   )
 }
 

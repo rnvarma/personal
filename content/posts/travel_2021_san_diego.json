@@ -1,0 +1,11 @@
+{
+  "type": "travel",
+  "travels": [
+    {
+      "location": "San Diego, CA",
+      "end_date": "2021-08-28",
+      "with": "Alex and Calvin"
+    }
+  ],
+  "date": "2021-08-23"
+}

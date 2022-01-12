@@ -1,0 +1,11 @@
+{
+  "type": "travel",
+  "travels": [
+    {
+      "location": "New York City, NY",
+      "end_date": "2021-09-17",
+      "with": "Explo Team"
+    }
+  ],
+  "date": "2021-09-14"
+}

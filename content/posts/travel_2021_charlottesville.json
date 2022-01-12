@@ -1,0 +1,11 @@
+{
+  "type": "travel",
+  "travels": [
+    {
+      "location": "Charlottesville, VA",
+      "end_date": "2021-12-22",
+      "with": "Navi, Sajal, Sragi, and Sasu"
+    }
+  ],
+  "date": "2021-12-16"
+}

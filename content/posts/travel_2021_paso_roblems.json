@@ -1,0 +1,11 @@
+{
+  "type": "travel",
+  "travels": [
+    {
+      "location": "Paso Robles, CA",
+      "end_date": "2022-01-02",
+      "with": "Sonali, Adi, DK, Nandini, and Gujri"
+    }
+  ],
+  "date": "2021-12-31"
+}

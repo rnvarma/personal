@@ -1,0 +1,11 @@
+{
+  "type": "travel",
+  "travels": [
+    {
+      "location": "Paris, France",
+      "end_date": "2021-10-06",
+      "with": "Lifei & Antoine's Wedding"
+    }
+  ],
+  "date": "2021-10-02"
+}

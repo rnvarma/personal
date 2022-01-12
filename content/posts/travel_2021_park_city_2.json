@@ -1,0 +1,11 @@
+{
+  "type": "travel",
+  "travels": [
+    {
+      "location": "Park City, Utah",
+      "end_date": "2021-08-22",
+      "with": "Alexis, Ryan, Amanda, TJ, Garret, and Rachel"
+    }
+  ],
+  "date": "2021-08-13"
+}

@@ -1,0 +1,11 @@
+{
+  "type": "travel",
+  "travels": [
+    {
+      "location": "Tahoe, CA",
+      "end_date": "2021-12-16",
+      "with": "Gary, Calvin, and Veronica"
+    }
+  ],
+  "date": "2021-12-06"
+}

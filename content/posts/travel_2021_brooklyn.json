@@ -1,0 +1,11 @@
+{
+  "type": "travel",
+  "travels": [
+    {
+      "location": "Brooklyn, NY",
+      "end_date": "2021-12-06",
+      "with": "Navi"
+    }
+  ],
+  "date": "2021-12-01"
+}

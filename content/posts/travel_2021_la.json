@@ -1,0 +1,11 @@
+{
+  "type": "travel",
+  "travels": [
+    {
+      "location": "Los Angeles",
+      "end_date": "2021-04-17",
+      "with": "Gary, Andrew, and Scott"
+    }
+  ],
+  "date": "2021-04-04"
+}

@@ -1,0 +1,11 @@
+{
+  "type": "travel",
+  "travels": [
+    {
+      "location": "Lake Tahoe",
+      "end_date": "2021-03-16",
+      "with": "the  CZI Homies"
+    }
+  ],
+  "date": "2021-03-11"
+}

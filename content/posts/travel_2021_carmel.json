@@ -1,0 +1,11 @@
+{
+  "type": "travel",
+  "travels": [
+    {
+      "location": "Carmel",
+      "end_date": "2021-02-07",
+      "with": "the Family"
+    }
+  ],
+  "date": "2021-02-06"
+}

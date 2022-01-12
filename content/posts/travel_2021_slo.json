@@ -1,0 +1,11 @@
+{
+  "type": "travel",
+  "travels": [
+    {
+      "location": "San Luis Obispo",
+      "end_date": "2021-02-05",
+      "with": "the Alex, Viv, Palash, and Samia"
+    }
+  ],
+  "date": "2021-01-29"
+}

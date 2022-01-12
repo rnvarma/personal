@@ -1,0 +1,11 @@
+{
+  "type": "travel",
+  "travels": [
+    {
+      "location": "Park City, Utah",
+      "end_date": "2021-06-13",
+      "with": "the Explo Team"
+    }
+  ],
+  "date": "2021-06-06"
+}

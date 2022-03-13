@@ -1,0 +1,11 @@
+{
+  "type": "travel",
+  "travels": [
+    {
+      "location": "Lake Tahoe",
+      "end_date": "2022-02-21",
+      "with": "Navi, Marshall, Loretta, and Lhiam"
+    }
+  ],
+  "date": "2022-02-18"
+}

@@ -1,0 +1,11 @@
+{
+  "type": "travel",
+  "travels": [
+    {
+      "location": "Hawaii",
+      "end_date": "2022-02-13",
+      "with": "Sonali, Adi, Kruti, Arul, and DK"
+    }
+  ],
+  "date": "2022-02-05"
+}
